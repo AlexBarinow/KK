@@ -8,36 +8,15 @@ import java.util.Scanner;
 public class Task4 {
 
     static Scanner in = new Scanner(System.in);            //initializing block
-   static int[][] array = new int[3][3];
+    static int[][] array = new int[3][3];
 
     public static void main(String[] args) {
 
-
-
-
         assignArray(array);
-
-
-
-
-       displayArray(array);
-
-        int[][] arrayNew = new int[3][3];               //new array which is going to be transposed
-
-        for (int i = 0; i < array.length; i++)
-            for (int j = 0; j < array[i].length; j++)
-                arrayNew[j][i] = array[i][j];
-
-
+        displayArray(array);
+        int[][] arrayNew = getTransposed(array);  //new array which is going to be transposed
         System.out.println();
-
-
-        for (int[] iUnit : arrayNew) {                  //displaying transposed double array
-            for (int jUnit : iUnit)
-                System.out.print(jUnit + " ");
-            System.out.println();
-        }
-
+        displayArray(arrayNew);
 
     }
 
@@ -53,5 +32,14 @@ public class Task4 {
         for (int i = 0; i < array.length; i++)
             for (int j = 0; j < array[i].length; j++)
                 array[i][j] = in.nextInt();
+    }
+
+    public static int[][] getTransposed(int[][] matrix) {
+        int[][] transpose = new int[matrix[0].length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++)
+            for (int j = 0; j < matrix[i].length; j++)
+                transpose[j][i] = matrix[i][j];
+        return transpose;
     }
 }
