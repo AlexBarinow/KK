@@ -7,7 +7,7 @@ public class TaskOne {
         float[] array = new float[5];
         Scanner in = new Scanner(System.in);
 
-        for(int i = 1; i <= array.length;i++)
+        for (int i = 1; i <= array.length; i++)
             array[array.length - i] = in.nextFloat();
 
 
