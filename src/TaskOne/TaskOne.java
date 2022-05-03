@@ -1,10 +1,10 @@
-package Task_1;
+package TaskOne;
 
 import java.util.Scanner;
 
-public class Task_1 {
+public class TaskOne {
     public static void main(String[] args) {
-        float array[] = new float[5];
+        float[] array = new float[5];
         Scanner in = new Scanner(System.in);
 
         for(int i = 1; i <= array.length;i++)
