@@ -111,32 +111,4 @@ public class Matrix {
         return transpose;
     }
 
-    public static void main(String[] args) {
-        // example 1 - solving a system of equations
-        double[][] a = { { 1, 1, 1 }, { 0, 2, 5 }, { 2, 5, -1 } };
-        double[][] b = { { 6 }, { -4 }, { 27 } };
-
-        double[][] matrix = multiply(getInverse(a), b);
-        for (double[] i : matrix)
-            System.out.println(Arrays.toString(i));
-        System.out.println();
-
-        // example 2 - example 1 using reduced row echelon form
-        a = new double[][]{ { 1, 1, 1, 6 }, { 0, 2, 5, -4 }, { 2, 5, -1, 27 } };
-        matrix = rref(a);
-        for (double[] i : matrix)
-            System.out.println(Arrays.toString(i));
-        System.out.println();
-
-        // example 3 - solving a normal equation for linear regression
-        double[][] x = { { 2104, 5, 1, 45 }, { 1416, 3, 2, 40 },
-                { 1534, 3, 2, 30 }, { 852, 2, 1, 36 } };
-        double[][] y = { { 460 }, { 232 }, { 315 }, { 178 } };
-
-        matrix = multiply(
-                multiply(getInverse(multiply(getTransposed(x), x)), getTransposed(x)), y);
-        for (double[] i : matrix)
-            System.out.println(Arrays.toString(i));
-    }
-
 }
