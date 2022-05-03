@@ -7,22 +7,20 @@ import java.util.Scanner;
 
 public class Task4 {
 
+    static Scanner in = new Scanner(System.in);            //initializing block
+   static int[][] array = new int[3][3];
+
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);            //initializing block
-        int[][] array = new int[3][3];
 
 
-        for (int i = 0; i < array.length; i++)          //filling array
-            for (int j = 0; j < array[i].length; j++)
-                array[i][j] = in.nextInt();
+
+        assignArray(array);
 
 
-        for (int[] iUnit : array) {                     //displaying filled double array
-            for (int jUnit : iUnit)
-                System.out.print(jUnit + " ");
-            System.out.println();
-        }
+
+
+       displayArray(array);
 
         int[][] arrayNew = new int[3][3];               //new array which is going to be transposed
 
@@ -41,5 +39,19 @@ public class Task4 {
         }
 
 
+    }
+
+    private static void displayArray(int[][] arr) {
+        for (int[] iUnit : arr) {                  //displaying sum array
+            for (int jUnit : iUnit)
+                System.out.print(jUnit + " ");
+            System.out.println();
+        }
+    }
+
+    private static void assignArray(int[][] array) {          // This will allow to avoid duplicating the same code twice as we have two arrays
+        for (int i = 0; i < array.length; i++)
+            for (int j = 0; j < array[i].length; j++)
+                array[i][j] = in.nextInt();
     }
 }
