@@ -63,21 +63,18 @@ public class Task7 {
                 array[i][j] = in.nextInt();
     }
 
-   /* private static int[][] multiplyArrays() {         //This will multiply arrays and return the sum
-        int[][] sumArray = new int[size][size];
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                for (int k = 0; k < size; k++) {
-                    sumArray[i][j] += array[i][k] * secondArray[k][j];
-                }
-            }
-        }
-        return sumArray;
-    }*/   //multiply from prev proj, hidden as not needed
-
     private static boolean isDeterminantOrthogonal(double[][] array) {
         double determinant = getDeterminant(array);
         return determinant == 1 || determinant == -1;
+    }
+
+    private static double[][] getTransposed(double[][] array){
+
+
+
+
+
+        return
     }
 }
 
